@@ -1,1 +1,3 @@
-ref: https://www.youtube.com/watch?v=zF1hlOxucHE
+npm install when cloned
+
+karma start
