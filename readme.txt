@@ -1,3 +1,5 @@
-npm install when cloned
+#clone instructions
 
-karma start
+### npm install when cloned
+
+### karma start
