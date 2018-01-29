@@ -84,7 +84,6 @@ describe("currency formater", function() {
 
 //////////// currency formater: example 2 ////////////
 
-
 function addDollarSign(number) {
    const rawNumber = number.toString();
    const dollarSignedNumber = "$" + rawNumber;
@@ -97,4 +96,33 @@ describe("dollar sign", function() {
      console.log(number);
      expect(number).toEqual("$345,325");
   });
-})
+});
+
+
+//////////// calc width of array: example 1 ////////////
+
+// 1. round to nearest 0
+function getSum(total, num) {
+  var rounded = total + Math.round(num);
+  return rounded;
+}
+
+describe("round number", function() {
+  it("takes a total number and rounds to nearest 0", function() {
+    const total = getSum([1093], 0);
+    expect(total).toEqual('10930');
+  })
+});
+
+// 2. calc getSum total
+function getTotal(numbers) {
+  return numbers.reduce(getSum);
+}
+
+describe("calculate widths", function() {
+  it("totals the width of all sibling elements", function() {
+    const total = getTotal([324, 531, 433, 532]);
+    console.log('total: ' + total);
+    expect(total).toEqual(1820);
+  });
+});
