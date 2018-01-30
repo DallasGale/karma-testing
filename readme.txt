@@ -1,1 +1,1 @@
-karma with jasmine unit testing examples
+karma w/jasmine unit testing examples
